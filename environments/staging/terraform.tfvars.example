@@ -1,0 +1,32 @@
+aws_region   = "us-east-1"
+project_name = "mycompany"
+environment  = "staging"
+
+cluster_version = "1.31"
+vpc_cidr        = "10.20.0.0/16"
+az_count        = 3
+
+single_nat_gateway   = false
+enable_vpc_flow_logs = true
+
+cluster_endpoint_public_access       = true
+cluster_endpoint_public_access_cidrs = ["203.0.113.0/24"] # Replace with office/VPN CIDR
+
+cluster_enabled_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+
+managed_node_groups = {
+  general = {
+    instance_types = ["m6i.large"]
+    min_size       = 2
+    max_size       = 6
+    desired_size   = 3
+    labels = {
+      role = "general"
+    }
+  }
+}
+
+common_tags = {
+  Owner      = "platform-team"
+  CostCenter = "engineering"
+}

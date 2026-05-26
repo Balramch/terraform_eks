@@ -1,0 +1,8 @@
+# Copy to backend.hcl and fill after running bootstrap/backend.
+# Init: terraform init -backend-config=backend.hcl
+
+bucket         = "mycompany-eks-terraform-state-UNIQUE-SUFFIX"
+key            = "eks/prod/terraform.tfstate"
+region         = "us-east-1"
+dynamodb_table = "mycompany-eks-terraform-locks"
+encrypt        = true

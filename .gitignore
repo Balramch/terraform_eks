@@ -1,0 +1,54 @@
+# Terraform internal
+.terraform/
+
+# State files (CRITICAL)
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars
+
+
+# Plan files
+tfplan
+*.plan
+
+# Lock file (optional but OK to ignore in teams)
+.terraform.lock.hcl
+
+# Variables (sensitive)
+*.tfvars
+*.tfvars.json
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+=======
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+!environments/**/*.tfvars
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Terraform lock
+.terraform.lock.hcl
+.terraform
+
+# Environment
+.env
+.env.local
+
+# OS
+*.pem
+*.pub
