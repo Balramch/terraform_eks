@@ -1,5 +1,0 @@
-# Platform team owns all infrastructure changes
-* @platform-team
-
-/environments/prod/ @platform-team @security-team
-/modules/ @platform-team
