@@ -4,7 +4,7 @@ project_name = "mycompany-eks"
 # Optional. If omitted, bucket name is auto-generated as:
 #   mycompany-eks-tfstate-<your-aws-account-id>
 # Must be globally unique, lowercase only (no uppercase or underscores).
-# state_bucket_name = "mycompany-eks-tfstate-123456789012"
+# state_bucket_name = "mycompany-eks-tfstate-your_aws_id"
 
 tags = {
   Owner = "platform-team"
